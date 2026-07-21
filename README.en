@@ -1,0 +1,24 @@
+The program works for sure only in Ubuntu Mate 2024.04 LTS, but a user who knows Linux can modify it to work in other distros as well.
+
+This Program library was made by vibecoding. However, I mainly used AI as a search engine.
+License is GPL 3.0.
+
+Ohjelman löytää on yksinkertainen rajapinta UNIT-T UT161D-mittarille. The program is kind of a driver for git's unit_ut61eplus project, that's why the directory is strange for UNI-T UT161D.
+
+This can install as root user by install.sh-bash command.
+
+Root privileges (install.sh file) are required to install the libraries and define the necessary UDEV rules.
+User privileges (installVenvEnvironmentDoNotUseSudo.sh) are requred to install the venv-environment.
+
+When using a terminal, the program can be executed in the venv environment with a pair of commands (must be in the working directory of this project):
+
+source venv/bin/activate ;python3 readUT161dDMM.py
+
+The test program in question reads the name of the meter, turns the screen backlight on or off. Reads the meter reading once.
+
+So the host can view the project's code as long as he has installed git...
+git clone https://github.com/ljakob/unit_ut61eplus.git
+
+After you have downloaded, then copy the files of this project to to the installation directory, and you can try out my code. Assuming you own a UNI-T UT161D multimeter and a PC (eg Raspberry Pi 4) running Debian or Ubuntu variant. (However, I haven't (yet) gotten around to testing this particular project in Raspberry Pi.)
+
+

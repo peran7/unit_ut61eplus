@@ -1,1 +1,1 @@
-hidapi
+hidapi pyusb

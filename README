@@ -1,0 +1,23 @@
+Ohjelma toimii varmuudella vain Ubuntu Mate 2024.04 LTS:ssä, mutta linuxia osaava käyttäjä voi muokata sen toimimaan muissakin ympäristöissä.
+
+Tämä ohjelmakirjasto on tehty vibekoodaamalla. Tosin käytin AI:ta lähinnä hakukoneena.
+Lisenssi on GPL 3.0.
+
+Ohjelman tarkoituksena on luoda yksinkertainen rajapinta UNIT-T UT161D-mittarille. Ohjelma on tavallaan ajuri git:n unit_ut61eplus-projektille, siksi hakemiston on outo UNI-T UT161D:lle.
+
+Tämän asentaminen tapahtuu sekä root-käyttäjänä (install.sh) että normaalina käyttjänä (installVenvEnvironmentDoNotUseSudo.sh).
+
+Root-oikeuksia (install.sh-tiedosto) tarvitaan kirjastojen asentamiseen ja tarvittavien UDEV-sääntöjen määrittelemiseen.
+Tavallisella käyttäjällä asennetaan venv-virtuaaliympäristö.
+
+Kun käyttää päätteellä, niin ohjelman saa suoritettua venv-ympäristössä käskyparilla (pitää olla tämän projektin työhakemistossa):
+
+source venv/bin/activate ;python3 readUT161dDMM.py
+
+Kyseinen testiohjelma lukee mittarin nimen, laittaa näytön taustavalon joko päälle tai pois. Lukee kertaalleen mittarin lukeman.
+
+Isäntä projektin koodin saa siis näkyviin, kunhan on asentanut git:n ...
+git clone https://github.com/ljakob/unit_ut61eplus.git
+
+Kun olet ladannut, niin sen jälkeen kopioi tämän projektini tiedostot ko. asennushakemistoon, niin pääset kokeilemaan minun räpellystä. Olettaen, että omistat UNI-T UT161D-yleismittarin ja PC:n (esim. Raspberry Pi 4:n), jossa on Debian tai Ubuntu-variantti. (En tosin ole juuri tätä projektia kerennyt (vielä) testata Raspissa.)
+
